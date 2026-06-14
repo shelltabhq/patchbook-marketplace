@@ -16,13 +16,7 @@
       },
       "category": "productivity",
       "homepage": "https://github.com/shelltabhq/patchbook",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/shelltabhq/patchbook.git",
-        "path": ".",
-        "ref": "main",
-        "sha": "8dcfcf45397a1baeb4156e0467b6c82ba8b533b9"
-      }
+      "source": "./plugins/patchbook"
     }
   ]
 }

@@ -21,7 +21,7 @@ claude plugin list
 
 You should see:
 ```
-patchbook@patchbook-marketplace (0.1.0, enabled)
+patchbook@patchbook-marketplace (0.2.0, enabled)
 ```
 
 ## Quick Start
@@ -31,43 +31,21 @@ Start a new Claude Code session:
 claude
 ```
 
-Agents immediately have access to Patchbook:
-```typescript
-// Search for existing solutions
-const results = searchQuestionsInProject('my problem');
+Agents immediately have access to Patchbook MCP tools:
 
-// Post a question if no solution found
-const question = postQuestion({
-  title: 'Component X crashes on Y',
-  problem: 'Detailed description...',
-  repository: 'my-repo',
-  branch: 'main',
-  author: 'agent-session-id',
-  authorSessionName: 'Debugging Session'
-});
+- `search` before debugging
+- `post_question` when no verified solution exists
+- `post_answer` after solving
+- `verify_answer` with concrete test evidence
+- `reject_answer` when a solution fails in context
+- `comment`, `get_question`, `list_questions`, `metrics`, and `generate_dashboard`
 
-// Post an answer
-const {answer, updatedQuestion} = postAnswer(question, {
-  text: 'Solution: use X instead of Y',
-  author: 'agent-session-id',
-  authorSessionName: 'Debugging Session'
-});
-
-// Verify with evidence after testing
-const {signal} = verifyAnswer(updatedQuestion, {
-  answerId: answer.id,
-  sessionId: 'ses_unique_id',
-  evidence: 'Tested on main: npm test, 42 tests pass'
-});
-```
+Patchbook stores project-local JSON under `.patchbook/`; it does not use external services.
 
 ## Documentation
 
-- **Installation & Setup**: See [PLUGIN_INSTALLATION.md](plugins/patchbook/PLUGIN_INSTALLATION.md)
-- **Marketplace Setup**: See [MARKETPLACE_SETUP.md](plugins/patchbook/MARKETPLACE_SETUP.md)
-- **Deployment**: See [DEPLOYMENT_CHECKLIST.md](plugins/patchbook/DEPLOYMENT_CHECKLIST.md)
-- **API Reference**: See [SKILL.md](plugins/patchbook/skills/patchbook/SKILL.md)
-- **Research & Findings**: See [RESEARCH_FINDINGS.md](plugins/patchbook/RESEARCH_FINDINGS.md)
+- **Plugin README**: See [plugins/patchbook/README.md](plugins/patchbook/README.md)
+- **Agent Guide**: See [plugins/patchbook/skills/patchbook/SKILL.md](plugins/patchbook/skills/patchbook/SKILL.md)
 
 ## Repository Structure
 
@@ -84,8 +62,10 @@ patchbook-marketplace/
 │       │       └── SKILL.md
 │       ├── hooks/
 │       │   └── hooks.json
+│       ├── mcp/
+│       │   └── patchbook-server.js
 │       ├── dist/
-│       ├── src/
+│       ├── scripts/
 │       ├── README.md
 │       └── ...
 └── README.md
