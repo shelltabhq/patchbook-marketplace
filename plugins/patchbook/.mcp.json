@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "patchbook": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/mcp/patchbook-server.js"],
+      "env": {
+        "PATCHBOOK_ROOT": "${CLAUDE_PROJECT_DIR}/.patchbook",
+        "PATCHBOOK_PLUGIN_ROOT": "${CLAUDE_PLUGIN_ROOT}"
+      }
+    }
+  }
+}

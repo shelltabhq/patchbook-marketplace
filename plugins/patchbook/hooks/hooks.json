@@ -1,5 +1,5 @@
 {
-  "description": "Patchbook hooks: SessionStart injects skill, PostToolUse generates dashboard",
+  "description": "Patchbook hooks: SessionStart adds MCP guidance, PostToolUse generates dashboard",
   "hooks": {
     "SessionStart": [
       {
