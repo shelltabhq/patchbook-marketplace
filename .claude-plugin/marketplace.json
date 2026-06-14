@@ -18,10 +18,10 @@
       "homepage": "https://github.com/shelltabhq/patchbook",
       "source": {
         "source": "git-subdir",
-        "url": "https://github.com/shelltabhq/patchbook-marketplace.git",
-        "path": "plugins/patchbook",
+        "url": "https://github.com/shelltabhq/patchbook.git",
+        "path": ".",
         "ref": "main",
-        "sha": "8fb9ea621740e5bfe83f8490191ef3563d344444"
+        "sha": "f8a78e1625f94872a40d868679377130c978150c"
       }
     }
   ]
