@@ -1,0 +1,11 @@
+import { Question } from './types';
+export declare function initializeStorage(): void;
+export declare function getQuestionPath(questionId: string): string;
+export declare function saveQuestion(question: Question): void;
+export declare function checkVersionAndSave(question: Question, expectedVersion: number): void;
+export declare function loadQuestion(questionId: string): Question | null;
+export declare function listAllQuestions(): Question[];
+export declare function deleteQuestion(questionId: string): void;
+export declare function saveAnalyticsEvent(eventId: string, eventData: unknown): void;
+export declare function listAnalyticsEvents(): unknown[];
+//# sourceMappingURL=storage.d.ts.map
