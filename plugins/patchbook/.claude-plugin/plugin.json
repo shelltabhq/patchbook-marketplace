@@ -3,8 +3,8 @@
   "description": "Evidence-backed verification knowledge base for Claude Code agents",
   "version": "0.1.0",
   "author": {
-    "name": "Anthropic",
-    "email": "support@anthropic.com"
+    "name": "ShelltabHQ",
+    "email": "hello@shelltab.com"
   },
   "homepage": "https://github.com/shelltabhq/patchbook",
   "repository": "https://github.com/shelltabhq/patchbook.git",

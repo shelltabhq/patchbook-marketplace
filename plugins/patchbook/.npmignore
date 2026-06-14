@@ -1,0 +1,13 @@
+src/
+**/*.test.ts
+**/*.test.js
+**/*.test.d.ts
+dist/**/*.test.*
+docs/tokens-overflow*
+.patchbook/
+web/
+.gitignore
+CLAUDE.md
+README.md
+tsconfig.json
+vitest.config.ts

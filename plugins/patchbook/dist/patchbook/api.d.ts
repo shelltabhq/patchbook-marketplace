@@ -58,4 +58,3 @@ export declare function postComment(question: Question, text: string, author: st
     comment: Comment;
     updatedQuestion: Question;
 };
-//# sourceMappingURL=api.d.ts.map

@@ -8,4 +8,3 @@ export declare function listAllQuestions(): Question[];
 export declare function deleteQuestion(questionId: string): void;
 export declare function saveAnalyticsEvent(eventId: string, eventData: unknown): void;
 export declare function listAnalyticsEvents(): unknown[];
-//# sourceMappingURL=storage.d.ts.map

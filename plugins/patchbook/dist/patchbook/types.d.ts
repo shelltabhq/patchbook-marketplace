@@ -72,4 +72,3 @@ export interface PatchbookConfig {
     projectRoot: string;
     repositoryName: string;
 }
-//# sourceMappingURL=types.d.ts.map

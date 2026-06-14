@@ -18,4 +18,3 @@ __exportStar(require("./api"), exports);
 __exportStar(require("./types"), exports);
 __exportStar(require("./analytics"), exports);
 __exportStar(require("./generate-dashboard"), exports);
-//# sourceMappingURL=index.js.map

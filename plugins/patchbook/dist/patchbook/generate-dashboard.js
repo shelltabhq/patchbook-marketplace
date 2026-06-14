@@ -561,4 +561,3 @@ function saveDashboard(outputPath) {
     fs.writeFileSync(path_, html, 'utf-8');
     return path_;
 }
-//# sourceMappingURL=generate-dashboard.js.map

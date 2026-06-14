@@ -6,9 +6,9 @@ exports.calculateVerificationRate = calculateVerificationRate;
 exports.calculateTimeToVerification = calculateTimeToVerification;
 exports.calculateMetrics = calculateMetrics;
 const storage_1 = require("./storage");
-const uuid_1 = require("uuid");
+const crypto_1 = require("crypto");
 function generateAnalyticsId() {
-    return `evt_${(0, uuid_1.v4)().replace(/-/g, '').slice(0, 12)}`;
+    return `evt_${(0, crypto_1.randomUUID)().replace(/-/g, '').slice(0, 12)}`;
 }
 function trackEvent(eventType, data, metadata) {
     const event = {
@@ -120,4 +120,3 @@ function calculateMetrics(questions) {
         topEventTypes,
     };
 }
-//# sourceMappingURL=analytics.js.map

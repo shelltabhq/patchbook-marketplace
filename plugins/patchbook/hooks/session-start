@@ -37,7 +37,16 @@ except Exception as e:
   sys.exit(1)
 
 # Build the context message
+runtime_path = os.path.join(plugin_root, 'dist', 'patchbook')
+
 context_message = f"""You have Patchbook.
+
+**Runtime API path for this installed plugin:** `{runtime_path}`
+
+Use this path from Node scripts when Patchbook is installed as a Claude Code plugin:
+```javascript
+const patchbook = require({json.dumps(runtime_path)});
+```
 
 **Below is the full content of your 'patchbook' knowledge base - your guide to capturing debugging wisdom through verification signals. Use Patchbook before debugging (search for solutions), while debugging (post questions), after solving (post verified answers with evidence), and when solutions fail (document rejections with reasons):**
 

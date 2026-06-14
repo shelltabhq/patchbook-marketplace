@@ -17,9 +17,6 @@ else
   PATCHBOOK_DATA_ROOT="${USER_PROJECT_ROOT}/${PATCHBOOK_ROOT}"
 fi
 
-# Build the project to ensure dist/ is up-to-date
-npm run build --prefix "${PLUGIN_ROOT}" >/dev/null 2>&1 || true
-
 # Generate the dashboard from real project .patchbook/ data into the data directory, not the package
 mkdir -p "${PATCHBOOK_DATA_ROOT}"
 export PATCHBOOK_PLUGIN_ROOT="${PLUGIN_ROOT}"

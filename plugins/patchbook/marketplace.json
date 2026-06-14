@@ -3,16 +3,16 @@
   "name": "patchbook-marketplace",
   "description": "Patchbook — evidence-backed verification signal knowledge base for agent workflows",
   "owner": {
-    "name": "Anthropic",
-    "email": "support@anthropic.com"
+    "name": "ShelltabHQ",
+    "email": "hello@shelltab.com"
   },
   "plugins": [
     {
       "name": "patchbook",
       "description": "Evidence-backed verification signal knowledge base for agent workflows. Search for solutions, post questions, and verify answers with testing evidence.",
       "author": {
-        "name": "Anthropic",
-        "email": "support@anthropic.com"
+        "name": "ShelltabHQ",
+        "email": "hello@shelltab.com"
       },
       "category": "productivity",
       "homepage": "https://github.com/shelltabhq/patchbook",
@@ -20,8 +20,7 @@
         "source": "git-subdir",
         "url": "https://github.com/shelltabhq/patchbook-marketplace.git",
         "path": "plugins/patchbook",
-        "ref": "main",
-        "sha": "f73fe33a17e49e6b90b6a0ca72ee0876d4be7c0a"
+        "ref": "main"
       }
     }
   ]

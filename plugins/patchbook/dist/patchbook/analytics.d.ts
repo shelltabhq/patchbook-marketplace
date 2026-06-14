@@ -30,4 +30,3 @@ export interface MetricsReport {
     }>;
 }
 export declare function calculateMetrics(questions: Question[]): MetricsReport;
-//# sourceMappingURL=analytics.d.ts.map

@@ -16,7 +16,7 @@ exports.getUnansweredQuestions = getUnansweredQuestions;
 exports.getOrCreateSession = getOrCreateSession;
 exports.searchQuestionsInProject = searchQuestionsInProject;
 exports.postComment = postComment;
-const uuid_1 = require("uuid");
+const crypto_1 = require("crypto");
 const analytics_1 = require("./analytics");
 const storage_1 = require("./storage");
 function captureAgentMetadata() {
@@ -56,7 +56,7 @@ function computeQuestionStatus(question) {
     return 'candidate';
 }
 function generateId(prefix) {
-    return `${prefix}_${(0, uuid_1.v4)().replace(/-/g, '').slice(0, 16)}`;
+    return `${prefix}_${(0, crypto_1.randomUUID)().replace(/-/g, '').slice(0, 16)}`;
 }
 function postQuestion(input, agentMetadata) {
     if (!input.title?.trim()) {
@@ -492,4 +492,3 @@ function postComment(question, text, author, authorSessionName, agentMetadata) {
     }
     return { comment, updatedQuestion: saved };
 }
-//# sourceMappingURL=api.js.map

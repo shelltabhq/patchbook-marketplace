@@ -1,0 +1,27 @@
+{
+  "name": "patchbook",
+  "version": "0.1.0",
+  "description": "Verification-signal knowledge base for agent workflows with evidence-backed solutions",
+  "main": "dist/patchbook/index.js",
+  "types": "dist/patchbook/index.d.ts",
+  "scripts": {
+    "build": "npm run validate",
+    "test": "npm run validate",
+    "typecheck": "npm run validate",
+    "prepack": "npm run validate",
+    "validate": "node -e \"const fs=require('fs'); const api=require('./dist/patchbook'); for (const f of ['dist/patchbook/index.js','dist/patchbook/index.d.ts','hooks/hooks.json','skills/patchbook/SKILL.md']) fs.accessSync(f); if (typeof api.postQuestion !== 'function' || typeof api.saveDashboard !== 'function') process.exit(1);\""
+  },
+  "keywords": [
+    "knowledge-base",
+    "debugging",
+    "agents",
+    "search",
+    "documentation"
+  ],
+  "author": "Michael",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {}
+}
